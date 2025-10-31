@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SellVester XP - Invest in Loyalty, Harvest Returns</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home/Landing Page -->
+    <div id="home-view" class="view active">
+        <div class="landing-container">
+            <div class="logo-section">
+                <div class="app-logo">🌱</div>
+                <h1>SellVester XP</h1>
+                <p class="tagline">Professional Loyalty Solutions</p>
+                <p class="app-description">Discrete cannabis loyalty platform with complete vendor customization and compliance-first design</p>
+            </div>
+            
+            <div class="role-selection">
+                <button class="btn-role btn-customer" onclick="app.selectRole('customer')">
+                    <span class="role-icon">👤</span>
+                    <span class="role-title">I'm a Customer</span>
+                    <span class="role-desc">View &amp; redeem rewards</span>
+                </button>
+                
+                <button class="btn-role btn-vendor" onclick="app.selectRole('vendor')">
+                    <span class="role-icon">🏪</span>
+                    <span class="role-title">I'm a Vendor</span>
+                    <span class="role-desc">Start growing your business</span>
+                </button>
+                
+                <button class="btn-role btn-admin" onclick="app.selectRole('admin')">
+                    <span class="role-icon">⚙️</span>
+                    <span class="role-title">Platform Admin</span>
+                    <span class="role-desc">View platform overview</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Registration Flow -->
+    <div id="customer-registration-welcome-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Join SellVester XP</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content registration-content">
+            <div class="registration-welcome">
+                <div class="sellvester-logo-small">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="45" r="25" fill="#000000"/>
+                        <circle cx="42" cy="40" r="4" fill="#4CAF50"/>
+                        <text x="42" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                        <circle cx="58" cy="40" r="4" fill="#4CAF50"/>
+                        <text x="58" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                        <circle cx="50" cy="50" r="3" fill="#FF0000"/>
+                        <path d="M 35 55 Q 50 65 65 55" stroke="#000000" stroke-width="2" fill="none"/>
+                        <path d="M 30 30 L 25 20 L 28 20" stroke="#000000" stroke-width="2" fill="none"/>
+                        <path d="M 70 30 L 75 20 L 72 20" stroke="#000000" stroke-width="2" fill="none"/>
+                    </svg>
+                    <div class="logo-text-small">Sellvester</div>
+                </div>
+                <h1>Join SellVester XP Rewards</h1>
+                <p class="welcome-subtitle">100% FREE. No credit card required.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎁</span>
+                        <span>Earn rewards at all your favorite vendors</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📱</span>
+                        <span>One app for multiple loyalty programs</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔔</span>
+                        <span>Get notified about special offers</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎉</span>
+                        <span>Never miss a reward again</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔒</span>
+                        <span>Your data is secure and private</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn--primary btn--full-width btn-large" onclick="app.startRegistration()">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Pricing/Registration Landing -->
+    <div id="vendor-pricing-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Vendor Plans</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content pricing-content">
+            <div class="sellvester-logo">
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="45" r="25" fill="#000000"/>
+                    <circle cx="42" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="42" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="58" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="58" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="50" cy="50" r="3" fill="#FF0000"/>
+                    <path d="M 35 55 Q 50 65 65 55" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 30 30 L 25 20 L 28 20" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 70 30 L 75 20 L 72 20" stroke="#000000" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="logo-text">Sellvester</div>
+            </div>
+            <div class="pricing-hero">
+                <h1>Grow Your Cannabis Business</h1>
+                <p class="pricing-tagline">Choose the plan that fits your needs</p>
+                <div class="social-proof">✨ Join 500+ vendors and 10,000+ customers</div>
+            </div>
+            
+            <div class="billing-toggle">
+                <button class="toggle-btn active" data-period="annual" onclick="app.switchBillingPeriod('annual')">
+                    <span class="toggle-label">Annual</span>
+                    <span class="toggle-savings">Save 20%</span>
+                </button>
+                <button class="toggle-btn" data-period="monthly" onclick="app.switchBillingPeriod('monthly')">
+                    <span class="toggle-label">Monthly</span>
+                </button>
+            </div>
+            <div class="annual-emphasis" style="text-align: center; margin: 20px 0; padding: 16px; background: var(--color-bg-3); border-radius: var(--radius-lg); color: var(--color-success); font-weight: 600;">
+                💰 Most vendors choose annual billing and save over $200 per year
+            </div>
+            
+            <div class="pricing-table">
+                <!-- BRONZE -->
+                <div class="pricing-tier" onclick="app.selectVendorTier('bronze', 'annual')">
+                    <div class="tier-header tier-bronze">
+                        <h3>BRONZE</h3>
+                        <div class="tier-subtitle">Free Forever</div>
+                    </div>
+                    <div class="tier-price">
+                        <div class="annual-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <div class="monthly-price" style="display: none;">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="tier-target">Perfect for new vendors &amp; testing</div>
+                    <div class="tier-features">
+                        <div class="feature-item">✓ Up to 100 customers</div>
+                        <div class="feature-item">✓ Basic loyalty tracking</div>
+                        <div class="feature-item">✓ QR code scanning</div>
+                        <div class="feature-item">✓ 25 products</div>
+                        <div class="feature-item">✓ 100 emails/month</div>
+                        <div class="feature-item">✓ Basic analytics</div>
+                        <div class="feature-item">✓ Email support</div>
+                        <div class="feature-item feature-disabled">✗ No SMS campaigns</div>
+                        <div class="feature-item feature-disabled">✗ No custom branding</div>
+                        <div class="feature-item feature-disabled">✗ Single location only</div>
+                    </div>
+                    <button class="btn btn--secondary btn--full-width tier-cta">Start Free</button>
+                </div>
+                
+                <!-- SILVER -->
+                <div class="pricing-tier pricing-tier-recommended" onclick="app.selectVendorTier('silver', 'annual')">
+                    <div class="tier-badge">MOST POPULAR</div>
+                    <div class="tier-header tier-silver">
+                        <h3>SILVER</h3>
+                        <div class="tier-subtitle">Best Value</div>
+                    </div>
+                    <div class="tier-price">
+                        <div class="annual-price">
+                            <span class="price-amount">$39</span>
+                            <span class="price-period">/month</span>
+                            <div class="billing-note">paid annually</div>
+                            <div class="savings-badge">SAVE $118/year</div>
+                            <div class="monthly-equivalent">vs $49/month monthly</div>
+                            <div class="billed-amount">Billed $470 annually</div>
+                        </div>
+                        <div class="monthly-price" style="display: none;">
+                            <span class="price-amount">$49</span>
+                            <span class="price-period">/month</span>
+                            <div class="annual-upsell">Save $118 with annual</div>
+                            <div class="billed-amount">Billed $49 monthly</div>
+                        </div>
+                    </div>
+                    <div class="tier-trial">14 days free trial</div>
+                    <div class="tier-target">Perfect for active vendors</div>
+                    <div class="tier-features">
+                        <div class="feature-item">✓ Up to 500 customers</div>
+                        <div class="feature-item">✓ Everything in Bronze</div>
+                        <div class="feature-item">✓ Unlimited products</div>
+                        <div class="feature-item">✓ 1,000 emails/month</div>
+                        <div class="feature-item">✓ 500 SMS/month</div>
+                        <div class="feature-item">✓ Marketing automation</div>
+                        <div class="feature-item">✓ Advanced analytics</div>
+                        <div class="feature-item">✓ Custom logo &amp; colors</div>
+                        <div class="feature-item">✓ Priority support</div>
+                    </div>
+                    <button class="btn btn--primary btn--full-width tier-cta">Start 14-Day Trial</button>
+                </div>
+                
+                <!-- GOLD -->
+                <div class="pricing-tier" onclick="app.selectVendorTier('gold', 'annual')">
+                    <div class="tier-badge" style="background: var(--color-warning);">BEST VALUE</div>
+                    <div class="tier-header tier-gold">
+                        <h3>GOLD</h3>
+                        <div class="tier-subtitle">For Growing Brands</div>
+                    </div>
+                    <div class="tier-price">
+                        <div class="annual-price">
+                            <span class="price-amount">$79</span>
+                            <span class="price-period">/month</span>
+                            <div class="billing-note">paid annually</div>
+                            <div class="savings-badge">SAVE $238/year</div>
+                            <div class="monthly-equivalent">vs $99/month monthly</div>
+                            <div class="billed-amount">Billed $950 annually</div>
+                        </div>
+                        <div class="monthly-price" style="display: none;">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                            <div class="annual-upsell">Save $238 with annual</div>
+                            <div class="billed-amount">Billed $99 monthly</div>
+                        </div>
+                    </div>
+                    <div class="tier-trial">14 days free trial</div>
+                    <div class="tier-target">Perfect for established brands</div>
+                    <div class="tier-features">
+                        <div class="feature-item">✓ Up to 2,000 customers</div>
+                        <div class="feature-item">✓ Everything in Silver</div>
+                        <div class="feature-item">✓ Unlimited emails &amp; SMS</div>
+                        <div class="feature-item">✓ Multi-location support</div>
+                        <div class="feature-item">✓ VIP customer tiers</div>
+                        <div class="feature-item">✓ VIP program builder</div>
+                        <div class="feature-item">✓ API access</div>
+                        <div class="feature-item">✓ Phone support</div>
+                        <div class="feature-item">✓ Account manager</div>
+                    </div>
+                    <button class="btn btn--primary btn--full-width tier-cta">Start 14-Day Trial</button>
+                </div>
+                
+                <!-- PLATINUM -->
+                <div class="pricing-tier" onclick="app.selectVendorTier('platinum', 'annual')">
+                    <div class="tier-header tier-platinum">
+                        <h3>PLATINUM</h3>
+                        <div class="tier-subtitle">Enterprise Solution</div>
+                    </div>
+                    <div class="tier-price">
+                        <div class="annual-price">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">pricing</span>
+                        </div>
+                        <div class="monthly-price" style="display: none;">
+                            <span class="price-amount">Custom</span>
+                            <span class="price-period">pricing</span>
+                        </div>
+                    </div>
+                    <div class="tier-target">Perfect for large operations</div>
+                    <div class="tier-features">
+                        <div class="feature-item">✓ Unlimited customers</div>
+                        <div class="feature-item">✓ Everything in Gold</div>
+                        <div class="feature-item">✓ White-label options</div>
+                        <div class="feature-item">✓ Custom integrations</div>
+                        <div class="feature-item">✓ Custom features</div>
+                        <div class="feature-item">✓ Compliance consulting</div>
+                        <div class="feature-item">✓ SLA guarantees</div>
+                        <div class="feature-item">✓ Dedicated support team</div>
+                        <div class="feature-item">✓ On-site training</div>
+                    </div>
+                    <button class="btn btn--secondary btn--full-width tier-cta">Contact Sales</button>
+                </div>
+            </div>
+            
+            <div class="pricing-faq">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <strong>Why choose annual billing?</strong>
+                    <p>Save 20% compared to monthly payments! Annual billing locks in your rate for 12 months and includes 2 months free. Perfect for growing businesses who want the best value.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Can I change plans later?</strong>
+                    <p>Yes, you can upgrade or downgrade anytime. Changes take effect immediately. You can also switch between monthly and annual billing.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>What happens after the free trial?</strong>
+                    <p>You're only charged if you continue. Cancel anytime during the trial with no charges. The 14-day trial applies to Silver and Gold plans.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Do you offer refunds?</strong>
+                    <p>Yes, we offer a 30-day money-back guarantee on all paid plans, whether monthly or annual.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>What is the VIP program builder?</strong>
+                    <p>Gold and Platinum vendors can create their own paid customer membership programs (e.g., $20/month with monthly free product). You set the pricing and benefits, and keep the subscription revenue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Vendor Registration Form -->
+    <div id="vendor-registration-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.vendorRegistrationBack()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Vendor Registration</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content registration-content">
+            <div class="sellvester-logo-small">
+                <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="45" r="25" fill="#000000"/>
+                    <circle cx="42" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="42" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="58" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="58" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="50" cy="50" r="3" fill="#FF0000"/>
+                    <path d="M 35 55 Q 50 65 65 55" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 30 30 L 25 20 L 28 20" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 70 30 L 75 20 L 72 20" stroke="#000000" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="logo-text-small">Sellvester</div>
+            </div>
+            <div class="registration-steps vendor-steps">
+                <div class="step-indicator" id="vendor-step-indicator-1">1</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="vendor-step-indicator-2">2</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="vendor-step-indicator-3">3</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="vendor-step-indicator-4">4</div>
+            </div>
+            
+            <form id="vendor-registration-form">
+                <!-- Step 1: Business Information -->
+                <div id="vendor-registration-step-1" class="registration-step active">
+                    <h3>Business Information</h3>
+                    <p class="step-description">Tell us about your cannabis business</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Name *</label>
+                        <input type="text" class="form-control" id="vendor-reg-business-name" placeholder="Green Valley Dispensary" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Category *</label>
+                        <select class="form-control" id="vendor-reg-category">
+                            <option value="dispensary">Cannabis Dispensary</option>
+                            <option value="brand">Cannabis Brand</option>
+                            <option value="event">Event Vendor</option>
+                            <option value="delivery">Delivery Service</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business License Number *</label>
+                        <input type="text" class="form-control" id="vendor-reg-license" placeholder="Required for compliance" required>
+                        <small class="form-help">🛡️ Required for cannabis compliance verification</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Street Address *</label>
+                        <input type="text" class="form-control" id="vendor-reg-address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">City *</label>
+                            <input type="text" class="form-control" id="vendor-reg-city" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">State *</label>
+                            <input type="text" class="form-control" id="vendor-reg-state" placeholder="CA" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ZIP *</label>
+                            <input type="text" class="form-control" id="vendor-reg-zip" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Business Phone *</label>
+                        <input type="tel" class="form-control" id="vendor-reg-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Website (Optional)</label>
+                        <input type="url" class="form-control" id="vendor-reg-website" placeholder="https://">
+                    </div>
+                    
+                    <button type="button" class="btn btn--primary btn--full-width" onclick="app.nextVendorRegistrationStep()">Continue</button>
+                </div>
+                
+                <!-- Step 2: Account Setup -->
+                <div id="vendor-registration-step-2" class="registration-step">
+                    <h3>Account Setup</h3>
+                    <p class="step-description">Create your login credentials</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Contact Name *</label>
+                        <input type="text" class="form-control" id="vendor-reg-contact-name" placeholder="Owner or Manager" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="vendor-reg-email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Phone Number *</label>
+                        <input type="tel" class="form-control" id="vendor-reg-contact-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password *</label>
+                        <input type="password" class="form-control" id="vendor-reg-password" required>
+                        <div class="password-strength" id="vendor-password-strength"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password *</label>
+                        <input type="password" class="form-control" id="vendor-reg-password-confirm" required>
+                    </div>
+                    
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn--secondary" onclick="app.prevVendorRegistrationStep()">Back</button>
+                        <button type="button" class="btn btn--primary" onclick="app.nextVendorRegistrationStep()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Program Configuration -->
+                <div id="vendor-registration-step-3" class="registration-step">
+                    <h3>Set Up Your Loyalty Program</h3>
+                    <p class="step-description">Customize how customers earn rewards</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Choose Program Type</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="vendor-reg-program-type" value="purchase_based" checked>
+                                <span><strong>Purchase-Based</strong><br/><small>Buy X items, get reward</small></span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="vendor-reg-program-type" value="spend_based">
+                                <span><strong>Spend-Based</strong><br/><small>Spend $X, get reward</small></span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="vendor-reg-program-type" value="visits_based">
+                                <span><strong>Visits-Based</strong><br/><small>Visit X times, get reward</small></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="vendor-reg-threshold-field">
+                        <label class="form-label">Set Threshold</label>
+                        <input type="number" class="form-control" id="vendor-reg-threshold" value="6" min="1">
+                        <small class="form-help" id="vendor-threshold-help">Number of purchases required to earn reward</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Define Reward *</label>
+                        <input type="text" class="form-control" id="vendor-reg-reward" placeholder="Free item from select collection" maxlength="100" required>
+                        <small class="form-help">Example: "Free eighth from select strains" or "$20 credit"</small>
+                    </div>
+                    
+                    <div class="program-preview">
+                        <strong>Customer sees:</strong>
+                        <p id="vendor-program-preview">Buy 6 purchases, earn free item from select collection!</p>
+                    </div>
+                    
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn--secondary" onclick="app.prevVendorRegistrationStep()">Back</button>
+                        <button type="button" class="btn btn--primary" onclick="app.nextVendorRegistrationStep()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Terms & Compliance -->
+                <div id="vendor-registration-step-4" class="registration-step">
+                    <h3>Terms &amp; Compliance</h3>
+                    <p class="step-description">Review and accept to complete registration</p>
+                    
+                    <div class="vendor-reg-summary" id="vendor-reg-summary"></div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vendor-accept-license" required>
+                                <span>I certify this business is licensed to sell cannabis</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vendor-accept-terms" required>
+                                <span>I agree to SellVester XP Terms of Service</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vendor-accept-compliance" required>
+                                <span>I agree to Cannabis Compliance Guidelines</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vendor-accept-age" required>
+                                <span>I understand customer age verification requirements (21+)</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vendor-accept-subscription" required>
+                                <span>I agree to vendor subscription terms</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn--secondary" onclick="app.prevVendorRegistrationStep()">Back</button>
+                        <button type="button" class="btn btn--primary" onclick="app.completeVendorRegistration()">Complete Registration</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Customer Registration Form -->
+    <div id="customer-registration-form-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.registrationBack()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Registration</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content registration-content">
+            <div class="sellvester-logo-small">
+                <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="45" r="25" fill="#000000"/>
+                    <circle cx="42" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="42" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="58" cy="40" r="4" fill="#4CAF50"/>
+                    <text x="58" y="43" font-size="6" text-anchor="middle" fill="#000000">$</text>
+                    <circle cx="50" cy="50" r="3" fill="#FF0000"/>
+                    <path d="M 35 55 Q 50 65 65 55" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 30 30 L 25 20 L 28 20" stroke="#000000" stroke-width="2" fill="none"/>
+                    <path d="M 70 30 L 75 20 L 72 20" stroke="#000000" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="logo-text-small">Sellvester</div>
+            </div>
+            <div class="registration-steps">
+                <div class="step-indicator" id="step-indicator-1">1</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-2">2</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-3">3</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-4">4</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-5">5</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-6">6</div>
+                <div class="step-line"></div>
+                <div class="step-indicator" id="step-indicator-7">7</div>
+            </div>
+            <div style="text-align: center; margin: 16px 0; font-size: 14px; color: var(--color-text-secondary);">
+                Step <span id="current-step-number">1</span> of 7
+            </div>
+            
+            <div style="text-align: center; margin: 16px 0; padding: 12px; background: var(--color-bg-3); border-radius: var(--radius-base); font-size: 14px; color: var(--color-success);">
+                🌟 Complete your profile for personalized deals! Profiles with preferences get 3x more relevant offers.
+            </div>
+            
+            <form id="registration-form">
+                <!-- Step 1: Personal Information -->
+                <div id="registration-step-1" class="registration-step active">
+                    <h3>Create Your Account</h3>
+                    <p class="step-description">Tell us about yourself</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">First Name *</label>
+                        <input type="text" class="form-control" id="reg-first-name" placeholder="John" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Last Name *</label>
+                        <input type="text" class="form-control" id="reg-last-name" placeholder="Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="reg-email" placeholder="john@example.com" required>
+                        <small class="form-help">✉️ We'll send you reward updates here!</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Mobile Phone *</label>
+                        <input type="tel" class="form-control" id="reg-phone" placeholder="(555) 555-0123" required>
+                        <small class="form-help">📱 For SMS rewards updates</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Date of Birth *</label>
+                        <input type="date" class="form-control" id="reg-dob" required>
+                        <small class="form-help">Must be 21+ | Used for birthday reward campaigns</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Gender (optional)</label>
+                        <select class="form-control" id="reg-gender">
+                            <option value="">Prefer not to say</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="nonbinary">Non-binary</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn btn--primary btn--full-width" onclick="app.nextRegistrationStep()">Continue</button>
+                </div>
+                
+                <!-- Step 2: Location & Preferences -->
+                <div id="registration-step-2" class="registration-step">
+                    <h3>Communication Preferences</h3>
+                    <p class="step-description">How would you like to hear from us?</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">How did you hear about us?</label>
+                        <select class="form-control" id="reg-source">
+                            <option value="">Select one...</option>
+                            <option value="friend">Friend referral</option>
+                            <option value="vendor">Vendor recommendation</option>
+                            <option value="social">Social media</option>
+                            <option value="event">Event</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Preferred Contact Method</label>
+                        <div class="radio-group-inline">
+                            <label class="radio-option-inline">
+                                <input type="radio" name="reg-contact" value="email">
+                                <span>Email</span>
+                            </label>
+                            <label class="radio-option-inline">
+                                <input type="radio" name="reg-contact" value="sms">
+                                <span>SMS</span>
+                            </label>
+                            <label class="radio-option-inline">
+                                <input type="radio" name="reg-contact" value="both" checked>
+                                <span>Both (recommended)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Communication Preferences</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="consent-updates" checked>
+                                <span>Yes, send me reward updates and progress notifications</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="consent-promos" checked>
+                                <span>Yes, notify me about special offers and promotions</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="consent-rewards" checked>
+                                <span>Yes, tell me when I'm close to earning rewards</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="consent-vendor-updates">
+                                <span>Send me vendor updates and new product alerts</span>
+                            </label>
+                        </div>
+                        <small style="color: var(--color-text-secondary); margin-top: 8px; display: block;">We respect your privacy. You can change these anytime.</small>
+                    </div>
+                    
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn--secondary" onclick="app.prevRegistrationStep()">Back</button>
+                        <button type="button" class="btn btn--primary" onclick="app.nextRegistrationStep()">Continue</button>
+                    </div>
+                </div>
+                
+                <!-- Step 6: Terms & Privacy -->
+                <div id="registration-step-6" class="registration-step">
+                    <h3>Almost Done!</h3>
+                    <p class="step-description">Please review and accept to continue</p>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="accept-age" required>
+                                <span><strong>I certify that I am 21 years of age or older</strong></span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="accept-terms" required>
+                                <span>I agree to the <a href="#" target="_blank">Terms of Service</a></span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="accept-privacy" required>
+                                <span>I agree to the <a href="#" target="_blank">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div style="background: var(--color-bg-2); padding: var(--space-12); border-radius: var(--radius-base); margin-top: var(--space-16); font-size: var(--font-size-sm);">
+                        🔒 <strong>Age Verification Required:</strong> You must be 21+ to use SellVester XP for cannabis loyalty programs.<br/><br/>
+                        <strong>California residents:</strong> View your <a href="#" target="_blank">CCPA rights</a><br/><br/>
+                        <strong>Note:</strong> You can update your preferences anytime in settings.
+                    </div>
+                    
+                    <div class="btn-group-horizontal">
+                        <button type="button" class="btn btn--secondary" onclick="app.prevRegistrationStep()">Back</button>
+                        <button type="button" class="btn btn--primary" onclick="app.nextRegistrationStep()">Complete Registration</button>
+                    </div>
+                </div>
+                
+                <!-- Step 7: Success -->
+                <div id="registration-step-7" class="registration-step">
+                    <div style="text-align: center; padding: 32px 0;">
+                        <div style="font-size: 80px; margin-bottom: 24px;">🎉</div>
+                        <h2 style="font-size: 28px; margin-bottom: 16px;">Welcome to Sellvester!</h2>
+                        <p style="font-size: 16px; color: var(--color-text-secondary); margin-bottom: 32px;">Your account is ready</p>
+                        
+                        <div style="background: var(--color-bg-3); padding: 24px; border-radius: var(--radius-lg); margin-bottom: 24px; text-align: left;">
+                            <h3 style="font-size: 18px; margin-bottom: 16px;">Next Steps:</h3>
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">✉️</span>
+                                    <span>Check your email to verify your account</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">📍</span>
+                                    <span>Find vendors near you and join loyalty programs</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">🎁</span>
+                                    <span>Start earning rewards today!</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn--primary btn--full-width btn-large" onclick="app.completeRegistration()">Start Exploring</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Customer Profile Settings -->
+    <div id="customer-profile-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('customer-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>My Profile</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="profile-section">
+                <h3>Contact Information</h3>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="profile-email" value="alex.martinez@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="profile-phone" value="555-0123">
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h3>Communication Preferences</h3>
+                <div class="preference-toggle">
+                    <div>
+                        <strong>Email Notifications</strong>
+                        <p class="pref-description">Receive promotional offers and reward updates via email</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked id="toggle-email">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="preference-toggle">
+                    <div>
+                        <strong>SMS Notifications</strong>
+                        <p class="pref-description">Receive text messages about your rewards and deals</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked id="toggle-sms">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn btn--primary btn--full-width" onclick="app.saveVendorSettings()">Save Program Settings</button>
+            <button class="btn btn--secondary btn--full-width" style="margin-top: 12px;" onclick="app.resetToDefaults()">Reset to Defaults</button>
+        </div>
+    </div>
+
+    <!-- Customer Dashboard -->
+    <div id="customer-dashboard-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>SellVester XP</h2>
+            <button class="btn-icon" onclick="app.showView('customer-profile')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6M1 12h6m6 0h6M4.2 4.2l4.2 4.2m5.6 5.6l4.2 4.2M4.2 19.8l4.2-4.2m5.6-5.6l4.2-4.2"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="content">
+            <div class="welcome-banner">
+                <h2>Welcome back, <span id="customer-name-display">Alex</span>! 👋</h2>
+                <p>Manage your loyalty programs and discover premium cannabis vendors</p>
+            </div>
+            
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" onclick="app.switchDashboardTab('my-vendors')">My Vendors</button>
+                <button class="tab-btn" onclick="app.switchDashboardTab('discover')">Discover</button>
+            </div>
+            
+            <div id="my-vendors-tab" class="tab-content active">
+                <div class="section-header">
+                    <h3>My Loyalty Programs</h3>
+                    <span class="badge" id="vendor-count-badge">3 active</span>
+                </div>
+                <div id="customer-cards-list" class="cards-grid"></div>
+            </div>
+            
+            <div id="discover-tab" class="tab-content">
+                <div class="discover-header">
+                    <h3>Discover Premium Vendors</h3>
+                    <p>Browse discrete, professional cannabis vendors with customized loyalty programs</p>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" class="form-control" placeholder="Search vendors..." id="vendor-search" oninput="app.searchVendors()">
+                </div>
+                
+                <div id="vendors-directory" class="vendors-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Detail View for Customers -->
+    <div id="vendor-detail-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>SellVester XP - My Cards</h2>
+            <button class="btn-icon" onclick="app.showView('customer-profile')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6M1 12h6m6 0h6M4.2 4.2l4.2 4.2m5.6 5.6l4.2 4.2M4.2 19.8l4.2-4.2m5.6-5.6l4.2-4.2"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="content">
+            <div id="customer-cards-list" class="cards-grid"></div>
+        </div>
+    </div>
+
+    <!-- Vendor Detail View for Customers -->
+    <div id="vendor-detail-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('customer-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2 id="vendor-detail-name"></h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="vendor-detail-container">
+                <div class="vendor-hero">
+                    <div class="vendor-icon">🌿</div>
+                    <h2 id="vendor-detail-title"></h2>
+                    <p id="vendor-detail-specialization"></p>
+                </div>
+                
+                <div class="reward-program-box">
+                    <h3>🎁 Reward Program</h3>
+                    <div class="reward-details-box">
+                        <div class="reward-detail-item">
+                            <span class="reward-label">Program Type:</span>
+                            <span id="vendor-reward-type"></span>
+                        </div>
+                        <div class="reward-detail-item">
+                            <span class="reward-label">Reward:</span>
+                            <span id="vendor-reward-desc"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="enrollment-status" class="enrollment-section"></div>
+                
+                <div class="vendor-actions">
+                    <button class="btn btn--primary btn--full-width btn-large" id="vendor-action-btn" onclick="app.handleVendorAction()"></button>
+                    <button class="btn btn--secondary btn--full-width" onclick="app.showProductCatalogFromDetail()">🛍️ Browse Products</button>
+                </div>
+                
+                <div class="vendor-contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span id="vendor-contact-phone"></span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <span id="vendor-contact-email"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Product Catalog -->
+    <div id="customer-product-catalog-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('customer-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2 id="catalog-vendor-name"></h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="catalog-notice">
+                <strong>Browse products online, purchase in person!</strong><br>
+                This is an information catalog only - no online sales. Visit the vendor at their location or event, then scan your SellVester XP QR code to earn loyalty points on your purchase.
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search products..." id="product-search" oninput="app.searchProducts()">
+            </div>
+            
+            <div class="filters-section">
+                <div class="filter-label">Categories:</div>
+                <div class="category-filters">
+                    <button class="category-chip active" onclick="app.filterByCategory('all')">All</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Flower')">🌿 Flower</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Concentrates')">✨ Concentrates</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Edibles')">🍫 Edibles</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Vapes')">💨 Vapes</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Wellness')">🌱 Wellness</button>
+                    <button class="category-chip" onclick="app.filterByCategory('Accessories')">🛍️ Accessories</button>
+                </div>
+                
+                <div class="filter-toggles">
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="in-stock-filter" onchange="app.toggleInStockFilter()">
+                        <span>In Stock Only</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="high-thc-filter" onchange="app.toggleHighThcFilter()">
+                        <span>High Potency (20%+ THC)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div id="products-grid" class="products-grid"></div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content product-modal">
+            <button class="btn-close" onclick="app.closeProductDetail()">×</button>
+            <div id="product-detail-content"></div>
+        </div>
+    </div>
+
+    <!-- Customer Card Detail -->
+    <div id="customer-card-detail-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('customer-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2 id="card-detail-vendor-name"></h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content card-detail-content">
+            <div class="qr-code-section">
+                <div class="qr-code-container">
+                    <div id="customer-qr-code" class="qr-code"></div>
+                </div>
+                <p class="qr-instruction">Show this QR code to the vendor</p>
+            </div>
+            
+            <div class="punch-card-section">
+                <h3>Progress</h3>
+                <div id="punch-card-visual" class="punch-card-visual"></div>
+                <div id="progress-text" class="progress-text"></div>
+            </div>
+            
+            <div class="reward-details">
+                <h3>Reward</h3>
+                <div id="reward-description" class="reward-box"></div>
+            </div>
+            
+            <div id="purchase-history" class="purchase-history">
+                <h3>Recent Activity</h3>
+                <div id="history-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scan Confirmation Modal -->
+    <div id="scan-confirmation-modal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-animation">✓</div>
+            <h3>SellVester XP - Punch Added!</h3>
+            <p id="confirmation-message"></p>
+            <button class="btn btn--primary" onclick="app.closeConfirmationModal()">Continue</button>
+        </div>
+    </div>
+
+    <!-- Vendor Customer Database -->
+    <div id="vendor-database-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Customer Database</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="database-header">
+                <div class="database-stats">
+                    <div class="db-stat">
+                        <span class="db-stat-value" id="db-total">187</span>
+                        <span class="db-stat-label">Total Customers</span>
+                    </div>
+                    <div class="db-stat">
+                        <span class="db-stat-value" id="db-email">156</span>
+                        <span class="db-stat-label">Email Subscribers</span>
+                    </div>
+                    <div class="db-stat">
+                        <span class="db-stat-value" id="db-sms">142</span>
+                        <span class="db-stat-label">SMS Subscribers</span>
+                    </div>
+                </div>
+                
+                <div class="database-actions">
+                    <button class="btn btn--secondary btn-small" onclick="app.exportDatabase('email')">📧 Export Email List</button>
+                    <button class="btn btn--secondary btn-small" onclick="app.exportDatabase('sms')">📱 Export SMS List</button>
+                    <button class="btn btn--secondary btn-small" onclick="app.exportDatabase('full')">📊 Export Full Database</button>
+                </div>
+            </div>
+            
+            <div class="filters-bar">
+                <button class="filter-chip active" onclick="app.filterDatabase('all')">All (187)</button>
+                <button class="filter-chip" onclick="app.filterDatabase('email')">Email Subscribers (156)</button>
+                <button class="filter-chip" onclick="app.filterDatabase('sms')">SMS Subscribers (142)</button>
+                <button class="filter-chip" onclick="app.filterDatabase('reward-ready')">Reward Ready (23)</button>
+                <button class="filter-chip" onclick="app.filterDatabase('at-risk')">At Risk (31)</button>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search customers..." id="db-search">
+            </div>
+            
+            <div class="database-table" id="database-table"></div>
+        </div>
+    </div>
+
+    <!-- Vendor Marketing Center -->
+    <div id="vendor-marketing-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Marketing Center</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="marketing-hero">
+                <h1>Connect with Your Customers</h1>
+                <p>Send targeted campaigns to boost loyalty and drive repeat business</p>
+                <button class="btn btn--primary btn-large" onclick="app.showView('vendor-campaign-creator')">📧 Create New Campaign</button>
+            </div>
+            
+            <div class="marketing-stats">
+                <div class="metric-card">
+                    <div class="metric-label">Last Campaign</div>
+                    <div class="metric-value">Oct 27, 2025</div>
+                    <div class="metric-detail">Weekend Flash Sale</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Open Rate</div>
+                    <div class="metric-value">68%</div>
+                    <div class="metric-detail">Above industry average</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Conversions</div>
+                    <div class="metric-value">12</div>
+                    <div class="metric-detail">From last campaign</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Recent Campaigns</h3>
+                <div id="campaign-history" class="campaign-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campaign Creator -->
+    <div id="vendor-campaign-creator-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-marketing')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Create Campaign</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="campaign-creator">
+                <!-- Step 1: Channel Selection -->
+                <div id="campaign-step-1" class="campaign-step active">
+                    <h3>Choose Channel</h3>
+                    <div class="channel-options">
+                        <label class="channel-option">
+                            <input type="radio" name="campaign-channel" value="email" checked>
+                            <div class="channel-card">
+                                <div class="channel-icon">📧</div>
+                                <div class="channel-title">Email Campaign</div>
+                                <div class="channel-desc">Reach 156 email subscribers</div>
+                            </div>
+                        </label>
+                        <label class="channel-option">
+                            <input type="radio" name="campaign-channel" value="sms">
+                            <div class="channel-card">
+                                <div class="channel-icon">📱</div>
+                                <div class="channel-title">SMS Campaign</div>
+                                <div class="channel-desc">Reach 142 SMS subscribers</div>
+                            </div>
+                        </label>
+                        <label class="channel-option">
+                            <input type="radio" name="campaign-channel" value="both">
+                            <div class="channel-card">
+                                <div class="channel-icon">🚀</div>
+                                <div class="channel-title">Both Channels</div>
+                                <div class="channel-desc">Maximum reach</div>
+                            </div>
+                        </label>
+                    </div>
+                    <button class="btn btn--primary btn--full-width" onclick="app.nextCampaignStep()">Continue</button>
+                </div>
+                
+                <!-- Step 2: Audience Selection -->
+                <div id="campaign-step-2" class="campaign-step">
+                    <h3>Select Audience</h3>
+                    <div class="audience-segments" id="audience-segments"></div>
+                    <button class="btn btn--primary btn--full-width" onclick="app.nextCampaignStep()">Continue</button>
+                </div>
+                
+                <!-- Step 3: Template Selection -->
+                <div id="campaign-step-3" class="campaign-step">
+                    <h3>Choose Template</h3>
+                    <div class="template-grid" id="template-grid"></div>
+                    <button class="btn btn--primary btn--full-width" onclick="app.nextCampaignStep()">Customize Message</button>
+                </div>
+                
+                <!-- Step 4: Customize -->
+                <div id="campaign-step-4" class="campaign-step">
+                    <h3>Customize Message</h3>
+                    <div class="message-editor">
+                        <div class="form-group">
+                            <label class="form-label">Subject Line (for Email)</label>
+                            <input type="text" class="form-control" id="campaign-subject" placeholder="Enter subject...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="campaign-message" rows="6" placeholder="Enter your message..."></textarea>
+                            <small class="char-counter"><span id="char-count">0</span>/160 characters (SMS guidance)</small>
+                        </div>
+                        <div class="merge-fields">
+                            <strong>Available merge fields:</strong>
+                            <button class="merge-field-btn" onclick="app.insertMergeField('{customer_name}')">Name</button>
+                            <button class="merge-field-btn" onclick="app.insertMergeField('{punches_left}')">Punches Left</button>
+                            <button class="merge-field-btn" onclick="app.insertMergeField('{current_punches}')">Current Punches</button>
+                            <button class="merge-field-btn" onclick="app.insertMergeField('{reward_description}')">Reward</button>
+                        </div>
+                        <div class="preview-section">
+                            <h4>Preview</h4>
+                            <div class="message-preview" id="message-preview"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--full-width" onclick="app.nextCampaignStep()">Review &amp; Send</button>
+                </div>
+                
+                <!-- Step 5: Review & Send -->
+                <div id="campaign-step-5" class="campaign-step">
+                    <h3>Review &amp; Send</h3>
+                    <div class="campaign-summary" id="campaign-summary"></div>
+                    <button class="btn btn--primary btn--full-width btn-large" onclick="app.sendCampaign()">Send Campaign Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Dashboard -->
+    <div id="vendor-dashboard-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>SellVester XP - Vendor Portal</h2>
+            <button class="btn-icon" onclick="app.showView('vendor-settings')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6M1 12h6m6 0h6M4.2 4.2l4.2 4.2m5.6 5.6l4.2 4.2M4.2 19.8l4.2-4.2m5.6-5.6l4.2-4.2"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="content">
+            <div class="welcome-banner" style="margin-bottom: 24px;">
+                <h2>Welcome to Your Vendor Portal</h2>
+                <p>Customize your loyalty program to fit your business perfectly</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-active-customers">0</div>
+                    <div class="stat-label">Active Customers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-rewards-issued">0</div>
+                    <div class="stat-label">Rewards This Month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-avg-value">$0</div>
+                    <div class="stat-label">Avg Customer Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-redemption-rate">0%</div>
+                    <div class="stat-label">Redemption Rate</div>
+                </div>
+            </div>
+            
+            <button class="btn btn--primary btn--full-width btn-scan" onclick="app.showView('vendor-scanner')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M3 9h18M3 15h18"/>
+                </svg>
+                Scan Customer QR Code
+            </button>
+            
+            <div class="section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-16);">
+                    <h3 style="margin: 0;">Inventory Summary</h3>
+                    <button class="btn btn--secondary btn-small" onclick="app.showVendorProducts()">✏️ Manage</button>
+                </div>
+                <div id="vendor-inventory-summary" class="inventory-summary"></div>
+            </div>
+            
+            <div class="section">
+                <h3>Recent Check-ins</h3>
+                <div id="recent-checkins" class="checkins-list"></div>
+            </div>
+            
+            <div class="dashboard-actions">
+                <div style="background: var(--color-surface); border: 1px solid var(--color-card-border); border-radius: var(--radius-lg); padding: var(--space-16); margin-bottom: var(--space-16);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <h4 style="margin: 0; font-size: 16px;">Current Program</h4>
+                        <button class="btn btn--secondary btn-small" onclick="app.showView('vendor-settings')">✏️ Edit</button>
+                    </div>
+                    <p id="current-program-summary" style="color: var(--color-text-secondary); margin: 0; font-size: 14px;">Loading...</p>
+                </div>
+                <button class="btn btn--primary btn--full-width btn-manage-products" onclick="app.showVendorProducts()">
+                    🛍️ Manage Items
+                </button>
+                <button class="btn btn--primary btn--full-width btn-marketing" onclick="app.showView('vendor-marketing')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Marketing Center
+                </button>
+                <button class="btn btn--secondary btn--full-width" onclick="app.showView('vendor-database')">
+                    📊 Customer Database
+                </button>
+                <button class="btn btn--secondary btn--full-width" onclick="app.showView('vendor-customers')">
+                    View All Customers
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Scanner -->
+    <div id="vendor-scanner-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>SellVester XP Scanner</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="scanner-container">
+                <div class="scanner-frame">
+                    <div class="scanner-overlay"></div>
+                    <p>Position QR code within frame</p>
+                </div>
+            </div>
+            
+            <div class="scanner-actions">
+                <button class="btn btn--secondary btn--full-width" onclick="app.manualCustomerLookup()">
+                    Manual Customer Lookup
+                </button>
+                
+                <div class="divider">OR SCAN DEMO CUSTOMER</div>
+                
+                <div class="demo-customers">
+                    <div class="demo-customer" onclick="app.scanDemoCustomer('c1')">
+                        <div class="demo-qr">QR</div>
+                        <div>
+                            <div class="demo-name">Alex Martinez</div>
+                            <div class="demo-info">4/6 punches</div>
+                        </div>
+                    </div>
+                    <div class="demo-customer" onclick="app.scanDemoCustomer('c2')">
+                        <div class="demo-qr">QR</div>
+                        <div>
+                            <div class="demo-name">Jordan Smith</div>
+                            <div class="demo-info">2/6 punches</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Add Punch -->
+    <div id="vendor-add-punch-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-scanner')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Add Punch</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="customer-info-card">
+                <h3 id="punch-customer-name"></h3>
+                <p id="punch-customer-contact"></p>
+            </div>
+            
+            <div class="current-progress">
+                <h3>Current Progress</h3>
+                <div id="punch-progress-visual" class="punch-card-visual"></div>
+                <p id="punch-progress-text"></p>
+            </div>
+            
+            <div id="punch-action-section" class="action-section">
+                <h3>Add Transaction</h3>
+                <button class="btn btn--primary btn--full-width" onclick="app.addPunch()">
+                    Add 1 Punch
+                </button>
+            </div>
+            
+            <div id="spend-action-section" class="action-section" style="display: none;">
+                <h3>Record Purchase Amount</h3>
+                <input type="number" id="spend-amount" class="form-control" placeholder="Enter amount" min="0" step="0.01">
+                <button class="btn btn--primary btn--full-width" onclick="app.addSpend()">
+                    Add Purchase
+                </button>
+            </div>
+            
+            <div id="redeem-action-section" class="action-section" style="display: none;">
+                <div class="reward-unlocked">
+                    <div class="reward-icon">🎉</div>
+                    <h3>Reward Available!</h3>
+                    <p id="redeem-reward-text"></p>
+                    <button class="btn btn--primary btn--full-width" onclick="app.redeemReward()">
+                        Redeem Reward Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Customers List -->
+    <div id="vendor-customers-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>All Customers</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search customers..." id="customer-search">
+            </div>
+            
+            <div id="customers-list" class="customers-list"></div>
+        </div>
+    </div>
+
+    <!-- Vendor Products Management -->
+    <div id="vendor-products-management-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Manage Products</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="inventory-stats">
+                <div class="inv-stat">
+                    <span class="inv-stat-value" id="vendor-total-products">0</span>
+                    <span class="inv-stat-label">Total Products</span>
+                </div>
+                <div class="inv-stat inv-stat-success">
+                    <span class="inv-stat-value" id="vendor-in-stock">0</span>
+                    <span class="inv-stat-label">In Stock</span>
+                </div>
+                <div class="inv-stat inv-stat-warning">
+                    <span class="inv-stat-value" id="vendor-low-stock">0</span>
+                    <span class="inv-stat-label">Low Stock</span>
+                </div>
+                <div class="inv-stat inv-stat-error">
+                    <span class="inv-stat-value" id="vendor-out-stock">0</span>
+                    <span class="inv-stat-label">Out of Stock</span>
+                </div>
+            </div>
+            
+            <button class="btn btn--primary btn--full-width" onclick="app.showAddProductForm()">
+                + Add New Product
+            </button>
+            
+            <div class="section">
+                <h3>Your Products</h3>
+                <div id="vendor-products-list" class="vendor-products-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Product Form -->
+    <div id="vendor-product-form-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showVendorProducts()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2 id="product-form-title">Add New Product</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <form id="product-form" class="product-form">
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Product Name *</label>
+                        <input type="text" class="form-control" id="product-name" placeholder="e.g., Blue Dream" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Category *</label>
+                        <select class="form-control" id="product-category">
+                            <option value="Flower">Flower</option>
+                            <option value="Concentrates">Concentrates</option>
+                            <option value="Edibles">Edibles</option>
+                            <option value="Vapes">Vapes</option>
+                            <option value="Topicals">Topicals</option>
+                            <option value="Wellness">Wellness</option>
+                            <option value="Accessories">Accessories</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Strain Type (Optional)</label>
+                        <select class="form-control" id="product-strain">
+                            <option value="">Not applicable</option>
+                            <option value="Indica">Indica</option>
+                            <option value="Sativa">Sativa</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="CBD">CBD</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Brand/Manufacturer (Optional)</label>
+                        <input type="text" class="form-control" id="product-brand" placeholder="e.g., Nike, Apple, Local Roaster">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Item Details</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Description *</label>
+                        <textarea class="form-control" id="product-description" rows="4" placeholder="Describe effects, cultivation method, terpenes, etc. Keep it compliant - no medical claims." required></textarea>
+                        <small>🛡️ Keep descriptions compliant: focus on experience, quality, and characteristics. Avoid medical claims.</small>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">THC % (Optional)</label>
+                            <input type="number" class="form-control" id="product-thc" min="0" max="100" step="0.1" placeholder="e.g., 22">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">CBD % (Optional)</label>
+                            <input type="number" class="form-control" id="product-cbd" min="0" max="100" step="0.1" placeholder="e.g., 0.5">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Pricing &amp; Inventory</h3>
+                    
+                    <div class="pricing-options">
+                        <div class="form-group">
+                            <label class="form-label">Price ($) *</label>
+                            <input type="number" class="form-control" id="product-price-unit" min="0" step="0.01" placeholder="Enter price" required>
+                            <small>Standard price for this item or service</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Stock Status</label>
+                            <select class="form-control" id="product-stock-status">
+                                <option value="In Stock">In Stock</option>
+                                <option value="Low Stock">Low Stock</option>
+                                <option value="Out of Stock">Out of Stock</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Stock Quantity</label>
+                            <input type="number" class="form-control" id="product-stock-qty" min="0" placeholder="Optional">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-group-horizontal">
+                    <button type="button" class="btn btn--secondary" onclick="app.showVendorProducts()">Cancel</button>
+                    <button type="button" class="btn btn--primary" onclick="app.saveProduct()">Save Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vendor Settings -->
+    <div id="vendor-settings-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('vendor-dashboard')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Program Settings</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="settings-section">
+                <h3>Business Information</h3>
+                <div class="form-group">
+                    <label class="form-label">Business Name</label>
+                    <input type="text" class="form-control" id="business-name" value="Green Valley Premium">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Contact Phone</label>
+                    <input type="tel" class="form-control" id="business-phone" value="555-0100">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" id="business-email" value="info@greenvalley.com">
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Program Type <button class="btn btn--secondary btn-small" style="float: right;" onclick="alert('Choose how customers earn rewards at your business')">ℹ️ Help</button></h3>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="reward-type" value="purchase_based" checked onchange="app.updateProgramTypeFields()">
+                        <span><strong>Purchase-Based</strong><br/><small>Customer earns reward after X purchases/transactions</small></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="reward-type" value="spend_based" onchange="app.updateProgramTypeFields()">
+                        <span><strong>Spend-Based</strong><br/><small>Customer earns reward after spending $X total</small></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="reward-type" value="visits_based" onchange="app.updateProgramTypeFields()">
+                        <span><strong>Visits-Based</strong><br/><small>Customer earns reward after X visits/check-ins</small></span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="reward-type" value="points_based" onchange="app.updateProgramTypeFields()">
+                        <span><strong>Points-Based</strong><br/><small>Customer earns points per dollar, redeems at threshold</small></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="settings-section" id="threshold-settings">
+                <h3>Threshold Configuration</h3>
+                <div class="form-group" id="field-purchases">
+                    <label class="form-label">Number of Purchases Required</label>
+                    <input type="number" class="form-control" id="threshold-purchases" value="10" min="1">
+                    <small>Example: Customer must make 10 purchases to earn reward</small>
+                </div>
+                <div class="form-group" id="field-amount" style="display: none;">
+                    <label class="form-label">Dollar Amount Required ($)</label>
+                    <input type="number" class="form-control" id="threshold-amount" value="200" min="1">
+                    <small>Example: Customer must spend $200 to earn reward</small>
+                </div>
+                <div class="form-group" id="field-visits" style="display: none;">
+                    <label class="form-label">Number of Visits Required</label>
+                    <input type="number" class="form-control" id="threshold-visits" value="10" min="1">
+                    <small>Example: Customer must visit 10 times to earn reward</small>
+                </div>
+                <div id="field-points" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label">Points Per Dollar Spent</label>
+                        <input type="number" class="form-control" id="points-per-dollar" value="1" min="0.1" step="0.1">
+                        <small>Example: Customer earns 1 point for every $1 spent</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Points Required for Reward</label>
+                        <input type="number" class="form-control" id="points-threshold" value="100" min="1">
+                        <small>Example: Customer needs 100 points to earn reward</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Reward &amp; Terminology</h3>
+                <div class="form-group">
+                    <label class="form-label">Reward Description</label>
+                    <input type="text" class="form-control" id="reward-description" value="Complimentary selection" maxlength="100" placeholder="e.g., Free eighth, $20 credit, Complimentary selection">
+                    <small>What customers receive when they complete the program (max 100 characters)</small>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Transaction Terminology (Optional)</label>
+                    <input type="text" class="form-control" id="custom-terminology" placeholder="e.g., experiences, consultations, visits" maxlength="30">
+                    <small>Customize what you call transactions. Examples: "experiences" (discrete), "consultations" (medical), "purchases" (standard)</small>
+                </div>
+            </div>
+            
+            <!-- VIP Program Section (Gold/Platinum only) -->
+            <div class="settings-section vip-program-section" id="vip-program-section" style="display: none;">
+                <h3>
+                    <span>🌟 VIP Customer Membership Program</span>
+                    <span class="vip-badge">GOLD/PLATINUM</span>
+                </h3>
+                
+                <div class="vip-explanation">
+                    <strong>Create Your Own Customer VIP Program</strong>
+                    <p>Offer a paid monthly membership where customers get exclusive benefits like free products, priority service, and special perks. You set the price and benefits, and keep the subscription revenue (platform takes 10%).</p>
+                    <p style="margin-top: 8px;"><strong>Example:</strong> $20/month membership with monthly free eighth, 2x loyalty points, and exclusive strain access.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label class="preference-toggle">
+                        <div>
+                            <strong>Enable VIP Membership Program</strong>
+                            <p class="pref-description">Allow customers to subscribe to exclusive benefits</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="toggle-vip-enabled">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </label>
+                </div>
+                
+                <div id="vip-program-config" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label">VIP Program Name *</label>
+                        <input type="text" class="form-control" id="vip-program-name" placeholder="Green Valley VIP Club" maxlength="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Monthly Price (USD) *</label>
+                        <input type="number" class="form-control" id="vip-monthly-price" placeholder="20" min="5" max="100" step="1">
+                        <small>Recommended: $15-25/month</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">VIP Benefits (check all that apply)</label>
+                        <div class="vip-benefit-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-free-item" checked>
+                                <span>Monthly free item (define value limit below)</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-points">
+                                <span>2x loyalty points on all purchases</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-exclusive">
+                                <span>Access to exclusive products/strains</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-priority">
+                                <span>Priority service/consultation</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-events">
+                                <span>VIP events and tastings</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="vip-benefit-birthday">
+                                <span>Birthday gift</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Monthly Free Item Value Limit *</label>
+                        <input type="number" class="form-control" id="vip-free-item-limit" placeholder="40" min="10" max="100" step="5">
+                        <small>Maximum dollar value for monthly free item (e.g., $40 = free eighth)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Additional VIP Details (Optional)</label>
+                        <textarea class="form-control" id="vip-additional-details" rows="3" placeholder="Any other perks, restrictions, or details members should know..."></textarea>
+                    </div>
+                    
+                    <div class="vip-explanation" style="background: var(--color-bg-2);">
+                        <strong>💡 Why This Works:</strong>
+                        <ul style="margin: 8px 0 0 20px; padding: 0;">
+                            <li>You control pricing and economics</li>
+                            <li>You keep 90% of subscription revenue</li>
+                            <li>Choose which products qualify</li>
+                            <li>Builds deeper customer relationships</li>
+                            <li>Compliance-friendly (no cannabis delivery)</li>
+                            <li>Optional feature - not required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>🎨 Brand Customization</h3>
+                <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Customize how your business appears to customers. Your brand colors and terminology make your loyalty program unique.</p>
+                <div class="form-group">
+                    <label class="form-label">Brand Approach</label>
+                    <select class="form-control" id="brand-approach">
+                        <option value="Discrete &amp; Artisanal">Discrete &amp; Artisanal</option>
+                        <option value="Medical Professional">Medical Professional</option>
+                        <option value="Community-Focused">Community-Focused</option>
+                        <option value="Modern &amp; Accessible">Modern &amp; Accessible</option>
+                        <option value="Premium Quality">Premium Quality</option>
+                        <option value="Craft Quality">Craft Quality</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Primary Brand Color</label>
+                        <input type="color" class="form-control" id="brand-color-primary" value="#2D5016">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Secondary Brand Color</label>
+                        <input type="color" class="form-control" id="brand-color-secondary" value="#B8860B">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Customer Term (Optional)</label>
+                    <input type="text" class="form-control" id="customer-terminology" placeholder="e.g., connoisseurs, wellness members, community members" maxlength="30">
+                    <small>How you refer to your customers (default: "customers")</small>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Product Term (Optional)</label>
+                    <input type="text" class="form-control" id="product-terminology" placeholder="e.g., artisan selections, therapeutic products, premium selections" maxlength="30">
+                    <small>How you refer to your products (default: "products")</small>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Reward Term (Optional)</label>
+                    <input type="text" class="form-control" id="reward-terminology" placeholder="e.g., exclusive selections, therapeutic benefits, member rewards" maxlength="30">
+                    <small>How you refer to rewards (default: "rewards")</small>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Preview</h3>
+                <div style="background: var(--color-bg-3); border: 2px solid var(--color-primary); border-radius: var(--radius-lg); padding: var(--space-20); text-align: center;">
+                    <p style="font-size: 18px; margin-bottom: 12px;"><strong id="preview-text">Buy 10 purchases and earn a Free coffee of your choice!</strong></p>
+                    <div style="display: flex; gap: 8px; justify-content: center; margin-top: 16px;">
+                        <div class="punch-circle filled">✓</div>
+                        <div class="punch-circle filled">✓</div>
+                        <div class="punch-circle filled">✓</div>
+                        <div class="punch-circle"></div>
+                        <div class="punch-circle"></div>
+                        <div class="punch-circle"></div>
+                    </div>
+                    <p style="margin-top: 12px; color: var(--color-text-secondary); font-size: 14px;">This is how customers will see their progress</p>
+                </div>
+            </div>
+            
+            <button class="btn btn--primary btn--full-width">Save Settings</button>
+        </div>
+    </div>
+
+    <!-- Platform Admin View -->
+    <div id="platform-admin-view" class="view">
+        <div class="header">
+            <button class="btn-back" onclick="app.showView('home')">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h2>Platform Admin</h2>
+            <div class="header-spacer"></div>
+        </div>
+        
+        <div class="content">
+            <div class="admin-hero">
+                <h1>SellVester XP Platform</h1>
+                <p>Multi-vendor loyalty platform overview</p>
+            </div>
+            
+            <div class="platform-stats-grid">
+                <div class="platform-stat-card">
+                    <div class="platform-stat-icon">🏪</div>
+                    <div class="platform-stat-value">6</div>
+                    <div class="platform-stat-label">Total Vendors</div>
+                </div>
+                <div class="platform-stat-card">
+                    <div class="platform-stat-icon">👥</div>
+                    <div class="platform-stat-value">907</div>
+                    <div class="platform-stat-label">Total Customers</div>
+                </div>
+                <div class="platform-stat-card">
+                    <div class="platform-stat-icon">📊</div>
+                    <div class="platform-stat-value">1,243</div>
+                    <div class="platform-stat-label">Transactions (This Month)</div>
+                </div>
+                <div class="platform-stat-card">
+                    <div class="platform-stat-icon">💰</div>
+                    <div class="platform-stat-value">$474</div>
+                    <div class="platform-stat-label">Platform Revenue/Month</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Active Vendors</h3>
+                <div id="admin-vendors-list" class="admin-vendors-list"></div>
+            </div>
+            
+            <div class="platform-metrics">
+                <h3>Platform Health Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-title">Customer Satisfaction</div>
+                        <div class="metric-big-value">4.8/5 ⭐</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-title">Vendor Retention Rate</div>
+                        <div class="metric-big-value">94%</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-title">Avg Transaction Time</div>
+                        <div class="metric-big-value">10 sec</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-title">QR Scan Success Rate</div>
+                        <div class="metric-big-value">99.2%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
